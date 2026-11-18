@@ -1,4 +1,4 @@
-# 2. Relación Beneficio/Coste
+# 2. Relación Beneficio/Costo
 
 ## Situación Actual
 Actualmente el proceso requiere:
