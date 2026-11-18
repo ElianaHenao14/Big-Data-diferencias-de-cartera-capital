@@ -1,7 +1,7 @@
 # Caso de Negocio
 
 ### Título
-Automatización del Control y Detección de Diferencias de Capital de Cartera mediante KNIME
+Identificacion de Diferencias de Capital de Cartera mediante KNIME
 
 ### Problema
 La Cooperativa requiere validar diariamente las diferencias de capital de cartera entre diferentes fuentes de información.
@@ -13,10 +13,9 @@ Automatizar la identificación de diferencias de capital mediante la integració
 
 ### Objetivos Específicos
 - Integrar información proveniente de diferentes fuentes.
-- Calcular el capital esperado por NIT.
 - Comparar el capital esperado con el capital reportado.
 - Detectar diferencias automáticamente.
-- Generar informes de control para el área de cartera.
+- Generar informes de control para el área de operaciomes.
 
 ### Beneficios
 - Disminución de tiempos de conciliación.
