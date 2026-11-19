@@ -19,7 +19,7 @@ Estas actividades generan:
 ## Beneficios Esperados
 
 ### Operativos
-- Automatización del 100% del proceso de conciliación.
+- Automatización de las actividades de preparación, integración, cálculo y generación del reporte de diferencias.
 - Reducción del tiempo de análisis.
 - Menor intervención manual.
 
