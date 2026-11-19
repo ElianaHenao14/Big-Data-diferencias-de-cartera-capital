@@ -2,9 +2,9 @@
 
 ## Automatizacion de la identificacion de diferencias de capital de cartera mediante KNIME
 
-**Integrantes:** Eliana Henao Galeano y Sara [APELLIDOS]  
+**Integrantes:** Eliana Henao Galeano y Sara Lizeth Suarez Mona  
 **Docente:** Yeis Livis Taborda Henao  
-**Periodo:** I-2026
+**Periodo:** II-2026
 
 ## Descripcion
 El proyecto academico de big data para la automatizacion y  la conciliacion diaria del capital de cartera. Integra el plano del dia anterior, desembolsos, recaudos y el plano del dia de la diferencia; calcula el capital esperado por NIT y exporta las excepciones encontradas.
