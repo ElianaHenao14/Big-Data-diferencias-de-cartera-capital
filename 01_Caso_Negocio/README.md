@@ -9,7 +9,7 @@ La Cooperativa requiere validar diariamente las diferencias de capital de carter
 Actualmente el proceso demanda múltiples cruces de datos y validaciones, generando reprocesos, riesgos operativos y consumo de tiempo en actividades de conciliación.
 
 ### Objetivo General
-Automatizar la identificación de diferencias de capital mediante la integración y validación de archivos de cartera utilizando KNIME.
+Automatizar en KNIME la integracion, depuracion y conciliacion por NIT para identificar diferencias entre capital esperado y capital reportado.
 
 ### Objetivos Específicos
 - Integrar información proveniente de diferentes fuentes.
@@ -22,3 +22,6 @@ Automatizar la identificación de diferencias de capital mediante la integració
 - Reducción de errores manuales.
 - Mejor control de la información.
 - Mayor confiabilidad de los resultados.
+
+### Alcance
+Incluye ingesta, agregacion, cruces, tratamiento de nulos, calculo, filtro y exportacion. No incluye prediccion, correccion de sistemas fuente ni publicacion de datos reales.
