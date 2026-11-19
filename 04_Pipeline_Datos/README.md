@@ -11,7 +11,6 @@ El workflow procesa el plano del día anterior, los desembolsos, los recaudos y 
 ## Herramienta Utilizada
 * KNIME Analytics Platform.
 * Microsoft Excel como formato de entrada y salida.
-* GitHub para documentación y control de versiones.
 
 ## Fuentes de Información
 
