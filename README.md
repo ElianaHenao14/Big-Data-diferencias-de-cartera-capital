@@ -7,7 +7,7 @@
 **Periodo:** II-2026
 
 ## Descripcion
-El proyecto academico de big data para la automatizacion y  la conciliacion diaria del capital de cartera. Integra el plano del dia anterior, desembolsos, recaudos y el plano del dia de la diferencia; calcula el capital esperado por NIT y exporta las excepciones encontradas.
+Proyecto académico de Big Data que automatiza la conciliación diaria del capital de cartera. Integra el plano del día anterior, desembolsos, recaudos y plano del día de la diferencia, calcula el capital esperado por NIT y exporta las excepciones detectadas.
 
 ## Regla principal
 `Capital esperado = capital dia anterior + desembolsos - pagos de capital`
