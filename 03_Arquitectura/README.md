@@ -1,4 +1,4 @@
-# 3. Arquitectura Propuesta 
+# 03. Arquitectura Propuesta 
 
 ## Capa Bronze - Datos Originales
 La capa Bronze representa la ingesta de los archivos originales, sin modificar su contenido de origen. En el workflow esta capa corresponde a los cuatro nodos **Excel Reader**.
