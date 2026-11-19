@@ -126,28 +126,6 @@ Antes de aceptar la ejecución se deben validar los siguientes controles:
 * Validación manual de la fórmula con casos conocidos.
 * Comprobación de que la salida contiene únicamente las excepciones definidas.
 
-## Casos de Prueba
-
-| Caso | Datos de prueba | Resultado esperado |
-| --- | --- | --- |
-| Sin movimientos | Anterior 100, desembolsos 0, pagos 0, reportado 100 | Diferencia 0 |
-| Con desembolso | Anterior 100, desembolsos 50, pagos 0, reportado 150 | Diferencia 0 |
-| Con pago | Anterior 100, desembolsos 0, pagos 30, reportado 70 | Diferencia 0 |
-| Diferencia positiva | Esperado 120, reportado 100 | Diferencia 20 |
-| Diferencia negativa | Esperado 80, reportado 100 | Diferencia -20 |
-| NIT exclusivo | El NIT aparece en una sola fuente | Excepción de cobertura |
-
-## Automatización y Trazabilidad
-Para garantizar la reproducibilidad del workflow se recomienda:
-
-* Utilizar rutas relativas o variables de flujo.
-* Parametrizar la fecha del proceso.
-* Registrar el nombre de los archivos procesados.
-* Conservar el número de filas de entrada y salida.
-* Mantener nombres funcionales y anotaciones en los nodos.
-* Controlar las versiones del archivo .knwf en GitHub.
-* Utilizar datos sintéticos o anonimizados en el repositorio.
-
 ## Cómo Abrir el Workflow
 1. Abrir KNIME Analytics Platform.
 2. Seleccionar File.
