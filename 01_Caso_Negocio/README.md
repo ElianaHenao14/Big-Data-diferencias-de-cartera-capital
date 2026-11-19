@@ -1,4 +1,4 @@
-# 01 Caso de Negocio
+# 01. Caso de Negocio
 
 ### Título
 Identificacion de Diferencias de Capital de Cartera mediante KNIME
