@@ -15,7 +15,7 @@ Automatizar en KNIME la integracion, depuracion y conciliacion por NIT para iden
 - Integrar información proveniente de diferentes fuentes.
 - Comparar el capital esperado con el capital reportado.
 - Detectar diferencias automáticamente.
-- Generar informes de control para el área de operaciomes.
+- Generar informes de control para el área de operaciones.
 
 ### Beneficios
 - Disminución de tiempos de conciliación.
