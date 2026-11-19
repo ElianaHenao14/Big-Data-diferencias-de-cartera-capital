@@ -3,7 +3,7 @@
 ## Descripción General
 El pipeline desarrollado en KNIME automatiza la ingesta, preparación, integración y conciliación de cuatro fuentes de información utilizadas para identificar diferencias de capital de cartera por NIT.
 
-El workflow procesa el plano del día anterior, los desembolsos, los recaudos y el plano del día de la diferencia. A partir de estas fuentes calcula el capital esperado, lo compara con el capital reportado y genera un archivo final con las excepciones identificadas.
+El workflow procesa el plano del día anterior, los desembolsos, los recaudos y el plano del día de la diferencia. A partir de estas fuentes calcula el capital esperado, lo compara con el capital reportado y genera un archivo final con las diferencias identificadas.
 
 ## Archivo del Workflow
 `DIFERENCIAS DE CAPITAL BIG DATA.knwf`
