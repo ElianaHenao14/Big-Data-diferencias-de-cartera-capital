@@ -2,52 +2,72 @@
 
 ## Arquitectura Medallion
 
-### Bronze
-Datos sin transformar.
+# Capa Bronze - Datos Originales
 
-**Archivos fuente:**
+La capa Bronze representa la ingesta de los archivos originales, sin modificar su contenido de origen. En el workflow esta capa corresponde a los cuatro nodos **Excel Reader**.
 
-**Plano Día Antes**
-| NIT | Capital |
+## Fuentes
 
-**Desembolsos**
-| NIT | Valor Desembolso |
+| Fuente | Campos mínimos | Función |
+| --- | --- | --- |
+| Plano del día anterior | NIT, capital | Proporcionar el saldo base de la conciliación |
+| Desembolsos | NIT, valor desembolsado | Identificar los incrementos de capital |
+| Recaudos | NIT, concepto, efectivo, cheque | Identificar los pagos aplicados a capital |
+| Plano del día de la diferencia | NIT, capital | Proporcionar el capital reportado para la comparación |
 
-**Recaudos**
-| NIT | Efectivo | Cheque |
+Los archivos originales se conservan sin modificaciones para garantizar la trazabilidad del proceso.
 
-**Plano Día Diferencia**
-| NIT | Capital |
+# Capa Silver - Datos Depurados y Consolidados
 
----
+La capa Silver reúne las transformaciones necesarias para preparar, estandarizar e integrar la información.
 
-### Silver
-Procesos de transformación.
-Basados en el flujo KNIME:
+## Procesos Realizados
 
-**Limpieza**
-- Eliminación de registros inválidos.
-- Validación de tipos de datos.
-- Conversión de NIT a texto.
+* Selección de columnas mediante **Column Filter**.
+* Conversión del NIT a texto mediante **Number to String**.
+* Filtrado de los recaudos correspondientes a capital mediante **Row Filter**.
+* Cálculo del pago total como efectivo más cheque mediante **Math Formula**.
+* Agrupación y suma de valores por NIT mediante **GroupBy**.
+* Integración de las diferentes fuentes mediante **Joiner**.
+* Tratamiento de valores ausentes mediante **Missing Value**.
+* Cálculo del capital esperado.
 
-**Enriquecimiento**
-Agrupación:
-- Capital Día Antes por NIT
-- Desembolsos por NIT
-- Pagos por NIT
+## Regla de Negocio
 
-**Reglas de Negocio**
-Capital Esperado:
+> **Capital esperado = Capital del día anterior + Desembolsos - Pagos de capital**
 
- Capital Día AntesDesembolsosPagos
+## Resultado de la Capa Silver
 
-### Gold
-Información lista para análisis.
+Una tabla consolidada por NIT que contiene:
 
-**Variables finales:**
-| NIT | Capital Esperado | Capital Real | Diferencia |
+* Capital del día anterior.
+* Desembolsos.
+* Pagos de capital.
+* Capital esperado.
 
-**Clasificación:**
-Sin diferencia
-Diferencia positiva
-Diferencia negativa
+* Capa Gold - Información Lista para el Negocio
+La capa Gold contiene los resultados finales de la conciliación y la información preparada para análisis y visualización.
+
+Procesos realizados
+Cruce del capital esperado con el capital reportado.
+Tratamiento controlado de valores ausentes.
+Cálculo de la diferencia de capital.
+Clasificación del resultado.
+Filtrado de los registros con diferencias.
+Selección de las columnas finales.
+Exportación del reporte a Excel.
+Regla de comparación
+Diferencia de capital = Capital esperado - Capital reportado
+
+Variables finales
+NIT anonimizado.
+Capital esperado.
+Capital reportado.
+Diferencia de capital.
+Estado de conciliación.
+Fecha del proceso.
+Clasificación
+Conciliado: diferencia dentro de la tolerancia aprobada.
+Diferencia positiva: capital esperado mayor que el reportado.
+Diferencia negativa: capital esperado menor que el reportado.
+Excepción de cobertura: NIT presente únicamente en una de las fuentes.
