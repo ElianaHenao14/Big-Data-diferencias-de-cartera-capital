@@ -1,6 +1,6 @@
 # Proyecto final Big Data
 
-## Automatizacion de la identificacion de diferencias de capital de cartera mediante KNIME
+## Identificacion de diferencias de capital de cartera mediante KNIME
 
 **Integrantes:** Eliana Henao Galeano 202620045727 y Sara Lizeth Suarez Mona 202620052727  
 **Docente:** Yeis Livis Taborda Henao  
